@@ -1,0 +1,15 @@
+[Unit]
+Description=Jupyter-Notebook Daemon
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c "/usr/local/bin/jupyter-notebook --no-browser --notebook-dir=/home/ubuntu --ip 0.0.0.0 --NotebookApp.token=''"
+WorkingDirectory=/home/ubuntu
+User=ubuntu
+Group=ubuntu
+PIDFile=/run/jupyter-notebook.pid
+Restart=on-failure
+RestartSec=60s
+
+[Install]
+WantedBy=multi-user.target
