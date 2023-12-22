@@ -25,6 +25,7 @@ git clone --depth 1 https://github.com/tensorflow/models.git
 echo export PYTHONPATH=/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/ubuntu/tensorflow1/models/research:/home/ubuntu/tensorflow1/models/research/slim:~/tensorflow1/models/research:~/tensorflow1/models/research/slim >> ~/.bashrc
 cd /home/ubuntu/tensorflow1/models/research/
 protoc object_detection/protos/*.proto --python_out=.
+cd
 mkdir coco_ssd_mobilenet_v1_1.0_quant_2018_06_29
 cd coco_ssd_mobilenet_v1_1.0_quant_2018_06_29/
 wget http://storage.googleapis.com/download.tensorflow.org/models/tflite/coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip
